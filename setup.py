@@ -13,6 +13,7 @@ setup(
 
     packages=[
         'hollow',
+        'hollow.backend',
         'hollow.tests',
     ],
 )
