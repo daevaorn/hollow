@@ -16,6 +16,8 @@ class Meta(object):
 
     unique_together = []
 
+    parents = {}
+
     proxy = None
 
     managed = False
@@ -53,11 +55,14 @@ class Meta(object):
     def get_ordered_objects(self):
         return []
 
-    def get_all_related_objects(self):
+    def get_all_related_objects(self, include_hidden=None):
         return []
 
     def get_all_related_many_to_many_objects(self):
         return []
+
+    def get_delete_permission(self):
+        return 'delete'
 
 class Model(object):
     _deferred = False
