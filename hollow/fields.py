@@ -5,6 +5,7 @@ class Field(object):
     blank = True
     flatchoices = []
     choices = []
+    help_text = ''
 
     db_index = None
 
